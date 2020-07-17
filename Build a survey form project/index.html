@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+   
+    <title>Document</title>
+</head>
+<body>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <h1 id="title">Restaurant Survey</h1>
+<p id="description">Thank you for taking the time to help improve our service</p>
+
+<form id="survey-form">
+  
+  
+  <label id="name-label">Name:</label><br>
+  <input type="text" id="name" placeholder="Enter your name"  required ><br>
+  
+  <label id="email-label">Email:</label><br>
+  <input type="email" id="email" placeholder="Enter your email"  required ><br>
+ 
+  <label id="number-label"> Age:</label><br>
+  <input type="number" id="number" min="1" max="999" placeholder="Age"><br>
+  
+  
+  
+  <label for="Dietary_Question" style="text-decoration: underline;">Which option best describes your dietary equirements?</label><br>
+  <select id="dropdown" > 
+    <option value="" disabled selected hidden>Choose dietary type</option>
+    <option value="Vegetarian">Vegetarian</option>
+    <option value="Vegan">Vegan</option>
+    <option value="Dairy-Free">Dairy-Free</option>
+    <option value="Gluten-free">Gluten-free</option>
+    <option value="Halal">Halal</option>
+    <option value="Kosher">Kosher</option>
+    </select>
+  
+  
+  
+  <p style="text-decoration: underline;">Order Accuracy</p>
+  <div id="radio-points">
+  <input type="radio" name="Accuracy" value="Excellent"> Excellent <br>
+
+  <input type="radio" name="Accuracy" value="Good"> Good <br>
+  
+  <input type="radio" name="Accuracy" value="Average"> Average <br>
+  
+  <input type="radio" name="Accuracy" value="Dissatisfied"> Dissatisfied <br>
+  </div>
+  
+  <p style="text-decoration: underline;">What sides would you like to see on our menu?</p>
+  
+  <input type="checkbox"  name="sides" value="chips">
+  <label >Chips</label><br>
+  
+  <input type="checkbox"  name="sides" value="Tomato Sauce">
+  <label >Tomato Sauce</label><br>
+  
+  <input type="checkbox"  name="sides" value="Barbeque Sauce">
+  <label >Barbeque Sauce</label><br>
+  
+  <input type="checkbox"  name="sides" value="Chilli Sauce">
+  <label >Chilli Sauce</label><br>
+  
+  <input type="checkbox"  name="sides" value="Coke">
+  <label >Coke</label><br>
+  
+  <input type="checkbox"  name="sides" value="Juice">
+  <label >Juice</label><br>
+  
+  
+  <p style="text-decoration: underline;">Any Suggestions</p>
+  <textarea  rows="10" cols="50">
+  Enter your suggestions here.
+  </textarea>
+ 
+  
+  <input id="submit" type="submit" value="Submit">
+  
+ 
+  
+  
+</form>
+</body>
+</html>

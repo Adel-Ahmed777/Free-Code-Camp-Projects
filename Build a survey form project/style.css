@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+#title{
+  text-align: center;
+  font-size: 70px;
+  font-family: 'Chewy', cursive;
+  color: white;
+  border: 10px solid black;
+}
+
+body{
+  
+  background-image: url('https://glamadelaide.com.au/wp-content/uploads/2019/07/agapi_food_feature.jpg');
+}
+
+#description{
+  text-align: center;
+  font-size: 35px;
+  margin: 5px 0px 50px 0px;
+  color: white;
+  
+}
+
+#submit{
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: #A9A9A9;
+  color: black;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 5px 0px 50px 0px;
+  font-size: 25px;
+}
+
+#survey-form{
+  text-align:center;
+  font-size: 30px;
+  background-color: white;
+  width: 900px;
+  border: 10px solid black;
+  padding: 10px;
+  margin: auto;
+}
+
+#name{
+  height:50px;
+  width:200px;
+  font-size: 20px;
+  text-align:center;
+  margin: 5px 0px 5px 0px;
+  
+}
+
+#email{
+  height:50px;
+  width:200px;
+  font-size: 20px;
+  text-align:center;
+  margin: 5px 0px 5px 0px;
+  
+}
+
+#number{
+  height:50px;
+  width:200px;
+  font-size: 20px;
+  text-align:center;
+  margin: 5px 0px 50px 0px;
+  ;
+}
+
+#dropdown{
+ font-size: 20px;
+ 
+}
+
+#radio-points{
+  font-size: 30px;
+}
+
+textarea {
+    font-size:25px;
+  margin: 5px 0px 50px 0px;
+   text-align:center;
+}
