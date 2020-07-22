@@ -9,7 +9,7 @@
 
 body{
   
-  background-image: url('https://glamadelaide.com.au/wp-content/uploads/2019/07/agapi_food_feature.jpg');
+background-color: coral;
 }
 
 #description{
@@ -76,10 +76,22 @@ body{
 
 #radio-points{
   font-size: 30px;
+  text-align: left;
+  display: inline-block;
+  border-style: dashed;
+  padding: 1em
 }
 
 textarea {
     font-size:25px;
   margin: 5px 0px 50px 0px;
    text-align:center;
+}
+
+#check-points{
+  font-size: 30px;
+  text-align: left;
+  display: inline-block;
+  border-style: dashed;
+  padding: 1em
 }
