@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="technical_style.css" type="text/css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header> Linux Documentation </header>
+
+    <a href="#Getting_Started" class="nav-link">Getting Started</a>
+    <a href="#Command_Line" class="nav-link">Command Line</a>
+    <a href="#Permissions" class="nav-link">Permissions</a>
+    <a href="#User_Management" class="nav-link">User Management</a>
+    <a href="#Filesystem" class="nav-link">Filesystem</a>
+    <a href="#Reference" class="nav-link">Reference</a>
+  </nav>
+
+
+  <main id="main-doc">
+
+    <section class="main-section" id="Getting_Started">
+
+      <header >Getting Started</header>
+      <p>Hey rookie! So you decided to dive into this wonderful world known as Linux? It’s gonna be a beautiful and enjoyable road ahead! My name is Penguin Pete and I’m here to guide you through this journey. Let’s get started with a little bit of backstory about Linux.
+
+        To learn about how Linux came to be, let’s go back to the beginning to 1969 where Ken Thompson and Dennis Ritchie of Bell Laboratories developed the UNIX operating system. It was later rewritten in C to make it more portable and eventually became a widely used operating system.
+
+        A decade or so later, Richard Stallman started working on the GNU (GNU is Not UNIX) project, the GNU kernel called Hurd, which unfortunately never came to completion. The GNU General Public License (GPL), a free software license, was also created as a result of this.
+
+        The kernel is the most important piece in the operating system. It allows the hardware to talk to the software. It also does a whole lot of other things, but we’ll dig into that in a different course. For now, just know that the kernel controls pretty much everything that happens on your system.
+
+        During this time other efforts such as BSD, MINIX, etc were developed to be UNIX like-systems. However, one thing that all these UNIX like-systems had in common was the lack of a unified kernel.
+
+        Then in 1991, a young fellow named Linus Torvalds started developing what we now know today as the Linux kernel.</p>
+      </section>
+
+      <section class="main-section" id="Command_Line">
+        <header >Command Line</header>
+        <p>The Linux command line is a text interface to your computer.
+
+          Also known as shell, terminal, console, command prompts and many others, is a computer program intended to interpret commands.
+
+          Allows users to execute commands by manually typing at the terminal, or has the ability to automatically execute commands which were programmed in “Shell Scripts”.</p>
+
+          <p>The world is your oyster, or really the shell is your oyster.
+            What is the shell? The shell is basically a program that takes your commands from the keyboard and sends them to the operating system to perform.
+            If you’ve ever used a GUI, you’ve probably seen programs such as “Terminal” or “Console” these are just programs that launch a shell for you. Throughout this entire course we will be learning about the wonders of the shell.</p>
+
+            <p>In this course we will use the shell program bash (Bourne Again shell), almost all Linux distributions will default to the bash shell. There are other shells available such as ksh, zsh, tsch, but we won’t get into any of those.</p>
+            <p>The following are some of the commands that can be executed inside the command line</p>
+            <ul>
+              <li>pwd</li>
+              <li>cd</li>
+              <li>ls</li>
+              <li>touch</li>
+              <li>cat</li>
+              <li>cp</li>
+              <li>mv</li>
+              <li>rm</li>
+              <li>mkdir</li>
+              <li>man</li>
+              <li>echo</li>
+            </ul>
+
+            <p>Let’s start with a simple command, echo. The echo command just prints out the text arguments to the display.</p>
+            <code>$ echo Hello World</code>
+
+
+          </section>
+
+          <section class="main-section" id="Permissions">
+            <header >Permissions</header>
+            <p>Every file and directory in your UNIX/Linux system has following 3 permissions: </p>
+
+            <ul>
+              <li><b>Read:</b> This permission give you the authority to open and read a file. Read permission on a directory gives you the ability to lists its content.</li>
+
+              <li><b>Write:</b> The write permission gives you the authority to modify the contents of a file.
+                The write permission on a directory gives you the authority to add, remove and rename files stored in the directory.
+                Consider a scenario where you have to write permission on file but do not have write permission on the directory where the file is stored.
+                You will be able to modify the file contents. But you will not be able to rename, move or remove the file from the directory.</li>
+
+                <li><b>Execute:</b> In Windows, an executable program usually has an extension ".exe" and which you can easily run. In Unix/Linux,
+                  you cannot run a program unless the execute permission is set.
+                  If the execute permission is not set, you might still be able to see/modify the program code(provided read & write permissions are set), but not run it.</li>
+                </ul>
+
+
+                <p>Let's look at an example of how file permissions look in linux</p>
+
+                <code>$ ls -l Desktop/
+
+                  drwxr-xr-x 2 pete penguins 4096 Dec 1 11:45 .
+                </code>
+
+                <p>There are four parts to a file's permissions.
+                  The first part is the filetype, which is denoted by the first character in the permissions,
+                  in our case since we are looking at a directory it shows d for the filetype. Most commonly you will see a - for a regular file. </p>
+
+                  <p>The next three parts of the file mode are the actual permissions.
+                    The permissions are grouped into 3 bits each. The first 3 bits are user permissions, then group permissions and then other permissions.
+                    I've added the pipe to make it easier to differentiate</p>
+
+                    <code>d | rwx | r-x | r-x </code>
+              </section>
+
+              <section class="main-section" id="User_Management">
+                <header >User Management</header>
+                <p>In any traditional operating system, there are users and groups. They exist solely for access and permissions.
+                  When running a process, it will run as the owner of that process whether that is Jane or Bob. File access and ownership is also permission dependent.
+                  You wouldn't want Jane to see Bob's documents and vice versa.</p>
+
+                  <p>Each user has their own home directory where their user specific files get stored, this is usually located in /home/username, but can vary in different distributions.
+
+                    The system uses user ids (UID) to manage users, usernames are the friendly way to associate users with identification, but the system identifies users by their UID.
+                    The system also uses groups to manage permissions, groups are just sets of users with permission set by that group, they are identified by the system with their group ID (GID).</p>
+
+                    <p>In Linux, you'll have users in addition to the normal humans that use the system. Sometimes these users are system daemons that continuously run processes to keep the system functioning. One of the most important users is root or superuser, root is the most powerful user on the system, root can access any file and start and terminate any process. For that reason, it can be dangerous to operate as root all the time, you could potentially remove system critical files. Luckily, if root access is needed and a user has root access, they can run a command as root instead with the sudo command. The sudo command (superuser do) is used to run a command with root access, </p>
+
+                    <p>This is how root access would look inside linux</p>
+
+                    <code>$ ls -la /etc/shadow
+                      -rw-r----- 1 root shadow 1134 Dec 1 11:45 /etc/shadow</code>
+
+                      <p>in order to have root privileges you need to run any command with sudo</p>
+
+                      <code>$ sudo cat /etc/shadow</code>
+
+                    <p> </p>
+
+                  </section>
+
+                  <section class="main-section" id="Filesystem">
+                    <header >Filesystem</header>
+                    <p>At this point, you're probably well familiar with the directory structure of your system, if not you will be soon.
+                      Filesystems can vary with how they are structured, but for the most part they should conform to the Filesystem Hierarchy Standard. </p>
+
+                      <p>The directories should for the most part look like the following:</p>
+
+                      <li>/ - The root directory of the entire filesystem hierarchy, everything is nestled under this directory.</li>
+                      <li>/bin - Essential ready-to-run programs (binaries), includes the most basic commands such as ls and cp.</li>
+                      <li>/boot - Contains kernel boot loader files.</li>
+                      <li>/dev - Device files.</li>
+                      <li>/etc - Core system configuration directory, should hold only configuration files and not any binaries.</li>
+                      <li>/home - Personal directories for users, holds your documents, files, settings, etc. </li>
+                      <li>/lib - Holds library files that binaries can use.</li>
+                      <li>/media - Used as an attachment point for removable media like USB drives.</li>
+                      <li>/mnt - Temporarily mounted filesystems.</li>
+                      <li>/opt - Optional application software packages.</li>
+                      <li>/proc - Information about currently running processes.</li>
+                      <li>/root - The root user's home directory.</li>
+                      <li>/run - Information about the running system since the last boot.</li>
+                      <li>/sbin - Contains essential system binaries, usually can only be ran by root.</li>
+                      <li>/srv - Site-specific data which are served by the system.</li>
+                      <li>/tmp - Storage for temporary files</li>
+                      <li>/usr - This is unfortunately named, most often it does not contain user files in the sense of a home folder.
+                        This is meant for user installed software and utilities, however that is not to say you can't add personal directories in there.
+                        Inside this directory are sub-directories for /usr/bin, /usr/local, etc.</li>
+                        <li>/var - Variable directory, it's used for system logging, user tracking, caches, etc. Basically anything that is subject to change all the time.</li>
+
+                      </ul>
+
+                    </section>
+
+                    <section class="main-section" id="Reference">
+                      <header>Reference</header>
+                      <p>The infromation in this page has been taken from the following resources:</p>
+
+                      <a href="https://linuxjourney.com/" target="_blank">Linux Journey</a>
+                      <a href="https://www.linuxjournal.com/content/linux-command-line-interface-introduction-guide" target="_blank">Linux Journal</a>
+                      <a href="https://www.guru99.com/file-permissions.html" target="_blank">Guru 99</a>
+
+
+
+                    </section>
+
+
+                  </main>
+
+                </body>
+                <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+                </html>
