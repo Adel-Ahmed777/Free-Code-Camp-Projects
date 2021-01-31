@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap');
+
+body{
+  font-family: 'Bitter', serif;
+  background-color:  #fefbd8;
+  margin:0;
+}
+
+nav{
+  background-color: #618685;
+  color: white;
+  padding: 15px;
+  display:flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+nav a
+{
+  color: white;
+  margin-right: 40px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header{
+  height: 100vh;
+  background-color: #f2e394;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 28px;
+}
+
+
+section{
+  text-align: center;
+  padding: 45px;
+}
+
+section h2{
+  margin: 0;
+}
+
+section p{
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.background-color{
+  background-color: #c5d5c5;
+}
+
+.social-media-icons {
+  list-style-type:none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-media-icons a {
+  font-size: 30px;
+  margin-left: 25px;
+}
+
+.fa {
+  padding: 5px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  border-radius: 25px;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  border-radius: 25px;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+  border-radius: 25px;
+}
+
+.fa-github {
+  background: #000000;
+  color: white;
+  border-radius: 25px;
+}
+
+.fa-youtube {
+  background: #dd4b39;
+  color: white;
+  border-radius: 25px;
+}
+
+footer{
+  background-color: #618685;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+img {
+  width: 55%;
+  height: auto;
+  justify-content: center;
+}
+
+.project-tile{
+  max-width: 600px;
+  margin: 10px;
+  transition: transform 0.4s ease;
+}
+
+.project-tile:hover{
+  transform: scale(1.2);
+}
+
+.Projects-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-tile p {
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.project-tile a{
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width:400px) {
+  section {
+    padding: 20px;
+  }
+
+  nav{
+    display: block;
+    padding: 10px;
+    }
+
+  header p, h1{
+    flex-wrap: wrap;
+  }
+}
